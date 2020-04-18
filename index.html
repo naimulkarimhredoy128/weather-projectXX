@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Naimul-Weather.com</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <div class="app-wrap">
+    <header>
+      <input type="text" autocomplete="off" id="search_term" class="search-box" placeholder="Search for a city..." />
+    </header>
+    <main>
+      <section class="location">
+        <div class="city">Bangladesh, BD</div>
+        <div class="date">Thursday 16 April 2020</div>
+      </section>
+      <div class="current">
+        <div class="temp">33<span>°c</span></div>
+        <div class="weather">Haze</div>
+        <div class="hi-low">33°c / 33°c</div>
+      </div>
+    </main>
+  </div>
+   <script>
+     function activatePlacesSerach(){
+       var input=document.getElementById('search_term');
+       var autocomplete=new google.maps.places.Autocomplete(input);
+     }
+   </script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxb8CXV55op2s9D0Nm0Q6Ui7DQ-qSeTgw&libraries=places&callback=activatePlacesSerach"></script>
+  <script src="main.js"></script>
+</body>
+</html>
